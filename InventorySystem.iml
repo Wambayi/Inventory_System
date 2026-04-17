@@ -17,6 +17,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -27,5 +28,9 @@
         <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-26/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="javafx-sdk" level="project" />
+    <orderEntry type="library" name="postgresql-42.7.3" level="project" />
+    <orderEntry type="library" name="postgresql" level="project" 
+               
   </component>
 </module>
