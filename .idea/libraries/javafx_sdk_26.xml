@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="javafx-sdk-26">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop/javafx-sdk-26" />
+      <root url="file://$USER_HOME$/Desktop/javafx-sdk-26/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/javafx-sdk-26" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-26/lib" recursive="false" />
+  </library>
+</component>
