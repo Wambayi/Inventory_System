@@ -2,22 +2,19 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.Map;
+import java.sql.SQLException;
 
 public class DBConnection {
-    public static Connection getConnection() {
+    private static final String URL = "jdbc:postgresql://localhost:5432/inventory_db";
+    private static final String USER = "postgres";
+    private static final String PASS = "Wambzy20";
+
+    public static Connection getConnection() throws SQLException {
         try {
-            Map<String, String> env = System.getenv();
-
-            String url = env.get("DB_URL");
-            String user = env.get("DB_USER");
-            String password = env.get("DB_PASSWORD");
-
-            return DriverManager.getConnection(url, user, password);
-
-        } catch (Exception e) {
-            System.out.println("Database connection failed");
-            return null;
+            Class.forName("org.postgresql.Driver");
+            return DriverManager.getConnection(URL, USER, PASS);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException(e);
         }
     }
 }
