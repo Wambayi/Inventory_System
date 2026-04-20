@@ -3,6 +3,7 @@ package database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Map;
 
 public class DBConnection {
     private static final String URL = "jdbc:postgresql://localhost:5432/inventory_db";
@@ -15,6 +16,16 @@ public class DBConnection {
             return DriverManager.getConnection(URL, USER, PASS);
         } catch (ClassNotFoundException e) {
             throw new SQLException(e);
+            System.out.println("URL: " + url);
+            System.out.println("USER: " + user);
+            System.out.println("PASSWORD: " + password);
+
+            return DriverManager.getConnection(url, user, password);
+
+        } catch (SQLException e) {
+            System.out.println("Database connection failed");
         }
+
+        return null;
     }
-}
+    }
